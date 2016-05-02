@@ -2,7 +2,7 @@
   "name": "term-query",
   "version": "1.0.0",
   "description": "Small tool to query rxnorm and snomed REST API's",
-  "private": true,
+  "private": false,
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
