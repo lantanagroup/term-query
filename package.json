@@ -7,6 +7,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "scripts": {
+    "readme": "node node_modules/node-readme/bin/node-readme.js"
+  },
   "bin": {
     "term-query": "./index.js"
   },
@@ -20,5 +23,8 @@
     "underscore": "^1.8.3",
     "xlsx": "^0.8.0",
     "yargs": "^4.6.0"
+  },
+  "devDependencies": {
+    "node-readme": "^0.1.9"
   }
 }
