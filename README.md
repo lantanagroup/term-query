@@ -77,3 +77,9 @@ Package | Version | Dev
 [xlsx](https://www.npmjs.com/package/xlsx) | ^0.8.0 | ✖
 [yargs](https://www.npmjs.com/package/yargs) | ^4.6.0 | ✖
 [node-readme](https://www.npmjs.com/package/node-readme) | ^0.1.9 | ✔
+
+
+## References
+- [SNOMED CT Expression Constraint Language Specification and Guide](http://ihtsdo.org/fileadmin/user_upload/doc/download/doc_ExpressionConstraintLanguageSpecificationAndGuide_Current-en-US_INT_20150820.pdf?ok)
+- [SNOMED CT Snapshot Browser REST API](http://docs.snomedctsnapshotapi.apiary.io)
+- [RxNorm API](https://rxnav.nlm.nih.gov/RxNormAPIs.html)
