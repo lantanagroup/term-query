@@ -24,12 +24,28 @@ var argv = require('yargs')
     })
     .command('bodySite', 'Creates a bodySite list using default options for snomed command', {}, function() {
         var options = {
-            'limit': 10000,
-            'version': 'v20160131',
-            'edition': 'en-edition',
-            'expression': '< 91723000 | Anatomical structure (body structure) |',
+            'limit': snomed.builder.limit.default,
+            'version': snomed.builder.version.default,
+            'edition': snomed.builder.edition.default,
+            'replace': snomed.builder.replace.default,
+            'expression': ['< 91723000 | Anatomical structure (body structure) |'],
             'output': 'bodySite.xlsx'
-        }
+        };
+        snomed.handler(options);
+    })
+    .command('problems', 'Creates a problems list using default options for snomed command', {}, function() {
+        var options = {
+            'limit': snomed.builder.limit.default,
+            'version': snomed.builder.version.default,
+            'edition': snomed.builder.edition.default,
+            'replace': snomed.builder.replace.default,
+            'expression': [
+                '< 243796009 | Situation with explicit context (situation) |',
+                '< 404684003 | Clinical finding (finding) |',
+            ],
+            'output': 'problems.xlsx'
+        };
+        snomed.handler(options);
     })
     .demand(1)
     .strict()

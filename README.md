@@ -37,6 +37,7 @@ term-query rxnorm --tty "IN+PIN" --output "allergies.xlsx"
 | rxnorm | Queries RXNorm using custom options |
 | snomed | Queries Snomed-CT using custom options |
 | medications | Creates a medications list using default options for rxnorm command |
+| problems | Creates a problems list using default options for snomed command |
 | allergies | Creates an allergies list using default options for rxnorm command |
 | bodySite | Creates a bodySite list using default options for snomed command |
 
@@ -62,7 +63,7 @@ Options:
 | ------ | -------- | ----------- | ---- | ------- |
 | --help | No | Show help | boolean | |
 | --limit, -l | No | Limits the results returned from the query | number | 10000 |
-| --expression, -x | Yes | The expression to run against the SNOMED-CT API | string | < 91723000 \| Anatomical structure (body structure) \| |
+| --expression, -x | Yes | The expression (can be repeated) to run against the SNOMED-CT API | string | < 91723000 \| Anatomical structure (body structure) \| |
 | --version, -v | No | The version of SNOMED-CT to execute | string | v20160131 |
 | --edition, -e | No | The edition of SNOMED-CT to execute | string | en-edition |
   
