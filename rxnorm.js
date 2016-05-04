@@ -202,14 +202,14 @@ exports.handler = function (argv) {
             console.log('Processing ' + totalConcepts + ' IN+PIN codes');
 
             _.each(results.minConceptGroup.minConcept, function(minConcept, index) {
+                /*
                 if (index > 2000) {
                     return;
                 }
 
-                /*
-                 if (acceptableCuis.indexOf(minConcept.rxcui) < 0) {
-                 return;
-                 }
+                if (acceptableCuis.indexOf(minConcept.rxcui) < 0) {
+                    return;
+                }
                  */
 
                 // If we have already processed the row in a previous run...
@@ -219,7 +219,10 @@ exports.handler = function (argv) {
                     return;
                 }
 
-                var rowData = [minConcept.rxcui, minConcept.name, ''];
+                var conceptName = minConcept.name
+                    .replace(' (procedure)', '');
+
+                var rowData = [minConcept.rxcui, conceptName, ''];
                 promises.push(populateRowData(rowData, totalConcepts, index));
             });
 

@@ -40,6 +40,7 @@ term-query rxnorm --tty "IN+PIN" --output "allergies.xlsx"
 | problems | Creates a problems list using default options for snomed command |
 | allergies | Creates an allergies list using default options for rxnorm command |
 | bodySite | Creates a bodySite list using default options for snomed command |
+| dirServiceEventCodes | Creates a list of diagnostic imaging service event codes |
 
 Options:
 

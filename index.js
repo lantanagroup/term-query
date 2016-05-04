@@ -8,7 +8,7 @@ var argv = require('yargs')
     .command(snomed)
     .command('medications', 'Creates a medications list using default options for rxnorm command', {}, function() {
         var options = {
-            'tty': 'SBD',
+            'tty': 'SCD+SBD',
             'output': 'medications.xlsx'
         };
         rxnorm.handler(options);
@@ -44,6 +44,17 @@ var argv = require('yargs')
                 '< 404684003 | Clinical finding (finding) |',
             ],
             'output': 'problems.xlsx'
+        };
+        snomed.handler(options);
+    })
+    .command('dirServiceEventCodes', 'Creates a list of diagnostic imaging service event codes', {}, function() {
+        var options = {
+            'limit': snomed.builder.limit.default,
+            'version': snomed.builder.version.default,
+            'edition': snomed.builder.edition.default,
+            'replace': snomed.builder.replace.default,
+            'expression': [ '< 363679005 | Imaging (procedure) |' ],
+            'output': 'dirServiceEventCodes.xlsx'
         };
         snomed.handler(options);
     })
